@@ -3,6 +3,9 @@
 <img width="745" height="587" alt="cute" src="https://github.com/user-attachments/assets/e166dada-611d-4bd4-bcbc-f872b2564e5d" />
 
 ___
+🚀 Live Demo
+🔗 [View it on GitHub Pages](https://fidy369.github.io/cat-swipe-app/)
+___
 ✨ Features
 1. Swipe left/right to like or dislike cats
 2. Touch and mouse drag support (mobile & desktop)
