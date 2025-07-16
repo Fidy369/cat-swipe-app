@@ -4,25 +4,16 @@
 
 ___
 ✨ Features
-Swipe left/right to like or dislike cats
-
-Touch and mouse drag support (mobile & desktop)
-
-Floating heart animations on like/dislike
-
-Stacked cards effect with smooth transitions
-
-Confetti celebration when finished
-
-Cute cat API from CATAAS
+1. Swipe left/right to like or dislike cats
+2. Touch and mouse drag support (mobile & desktop)
+3. Floating heart animations on like/dislike
+4. Stacked cards effect with smooth transitions
+5. Confetti celebration when finished
+6. Cute cat API from CATAAS
 ___
 🛠️ Tech Stack
-Frontend: Vue 3 + Vite
-
-Styling: Tailwind CSS
-
-Animation: VueUse Motion
-
-Deployment: GitHub Pages
-
-Backend (Laravel)
+1. Frontend: Vue 3 + Vite
+2. Styling: Tailwind CSS
+3. Animation: VueUse Motion
+4. Deployment: GitHub Pages
+5. Backend (Laravel)
