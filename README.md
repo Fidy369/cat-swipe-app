@@ -1,6 +1,7 @@
 # cat-swipe-app
 
 <img width="745" height="587" alt="cute" src="https://github.com/user-attachments/assets/e166dada-611d-4bd4-bcbc-f872b2564e5d" />
+
 ___
 ✨ Features
 Swipe left/right to like or dislike cats
