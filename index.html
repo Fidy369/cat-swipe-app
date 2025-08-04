@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cat Swipe App</title>
-    <!-- Include your generated CSS -->
-    <link rel="stylesheet" href="./assets/app-CJ-EmJ80.css">
-    <link rel="stylesheet" href="./assets/app-CKGVj6CY.css">
-  </head>
-  <body>
-    <div id="app"></div>
-    
-    <!-- Load your built JavaScript -->
-    <script type="module" src="./assets/app-BZNxchjL.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asset List</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Company Assets</h1>
+    <table border="1" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Asset Name</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in assets" :key="item.asset">
+          <td>{{ item.asset }}</td>
+          <td>{{ item.department }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <button @click="downloadCSV">Download CSV</button>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          assets: [
+            { asset: "Printer", department: "HR" },
+            { asset: "Monitor", department: "IT" },
+            { asset: "Barcode Scanner", department: "ACCOUNT" }
+          ]
+        }
+      },
+      methods: {
+        downloadCSV() {
+          const header = "Asset Name,Department\n";
+          const rows = this.assets.map(a => `${a.asset},${a.department}`).join("\n");
+          const csv = header + rows;
+          const blob = new Blob([csv], { type: 'text/csv' });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = "assets.csv";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
 </html>
