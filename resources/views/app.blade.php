@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Paws</title>
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <meta charset="UTF-8">
+    <title>Asset Tracker</title>
+    @vite('resources/js/app.js') {{-- This injects Vue + Vite --}}
 </head>
 <body>
-  <div id="app"></div>
+    <div id="app"></div>
 </body>
 </html>
